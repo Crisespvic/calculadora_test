@@ -1,14 +1,14 @@
 '''Importar coses'''
 import sys
 import os
-from PySide6.QtWidgets import QApplication, QMainWindow
-from PySide6.QtUiTools import QUiLoader
+import PySide6.QtWidgets as qt
+import PySide6.QtUiTools as qtu
 
-class CalcApp(QMainWindow):
+class CalcApp(qt.QMainWindow):
     '''Clase calc'''
     def __init__(self):
         super().__init__()
-        loader = QUiLoader()
+        loader = qtu.QUiLoader()
         interface_path = os.path.join(os.path.dirname(__file__), "calculadora.ui")
         self.ui = loader.load(interface_path, None)
         self.contingut = ""
@@ -79,6 +79,6 @@ class CalcApp(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
+    app = qt.QApplication(sys.argv)
     window = CalcApp()
     sys.exit(app.exec())
