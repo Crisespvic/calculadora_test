@@ -13,7 +13,7 @@ def app(qtbot):
 
 def test_marcar1(app):
     '''Test per a comprovar que es pot introduir el número 1'''
-    # Simulem un clic al botó "1"
+    # Simulem un clic al boto "1"
     app.ui.Button1.click()
 
     # Verifiquem que el display mostra "1"
