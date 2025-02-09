@@ -4,7 +4,7 @@ from src.main import CalcApp
 
 
 @pytest.fixture # Es carrega sempre al principi del test
-def calculadora(qtbot):
+def app(qtbot):
     '''metode app'''
     test_app = CalcApp()
     qtbot.addWidget(test_app.ui)
