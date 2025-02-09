@@ -16,7 +16,7 @@ def test_marcar1(app):
     # Simulem un clic al botó "1"
     app.ui.Button1.click()
 
-    # Verifiquem que el displayy mostra "1"
+    # Verifiquem que el display mostra "1"
     assert app.ui.display.value() == int('1')
 
 def test_marcar2(app):
